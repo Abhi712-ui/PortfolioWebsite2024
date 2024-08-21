@@ -10,7 +10,7 @@ export function APIGetter(getter, setter, API_URL) {
             .catch(error =>{
                 console.error('There was an error fetching the projects!', error)
             })
-    }, [])
+    }, [API_URL, setter])
 }
 
 export function getMonthName(monthNumber) {
