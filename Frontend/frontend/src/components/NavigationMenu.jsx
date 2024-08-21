@@ -8,17 +8,17 @@ export default function NavigationMenu() {
                 <MenuItem
                     icon={'home'}
                     text={'Home'}
-                    onClick={() => window.location.href = 'http://localhost:3000'}
+                    onClick={() => window.location.href = 'https://abhimanyu-sharma.netlify.app'}
                 />
                 <MenuItem
                     icon={'code'}
                     text={'Projects'}
-                    onClick={() => window.location.href = 'http://localhost:3000/projects'}
+                    onClick={() => window.location.href = 'https://abhimanyu-sharma.netlify.app/projects'}
                 />
                 <MenuItem
                     icon={'star-empty'}
                     text={'skills'}
-                    onClick={() => window.location.href = 'http://localhost:3000/skills'}
+                    onClick={() => window.location.href = 'https://abhimanyu-sharma.netlify.app/skills'}
                 />
             </Menu>
         </>
