@@ -1,9 +1,0 @@
-[build]
-base = "Frontend/frontend/"
-publish = "build/"
-command = "echo $PWD && npm run build"
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
