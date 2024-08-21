@@ -1,6 +1,6 @@
 [build]
-base = "Frontend/frontend/build"  # Specify the base directory if your project is not in the root, e.g., "frontend"
-publish = "Frontend/frontend/build"  # This is the directory Netlify will deploy (usually "build" for React projects)
+base = "Frontend/frontend"  # Specify the base directory if your project is not in the root, e.g., "frontend"
+publish = "build"  # This is the directory Netlify will deploy (usually "build" for React projects)
 command = "npm run build"  # This is the build command for your project
 
 # Optional: Redirects configuration
