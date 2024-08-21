@@ -1,5 +1,5 @@
 [build]
-base = "PortfolioWebsite2024/Frontend/frontend/"
+base = "PortfolioWebsite2024/Frontend/frontend"
 publish = "Frontend/frontend/build"
 command = "npm run build"
 
