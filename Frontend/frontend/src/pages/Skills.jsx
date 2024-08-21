@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import {APIGetter} from "../components/APIGetter";
 import PortfolioNavbar from "../components/PortfolioNavbar";
 import {HTMLTable, Tag} from "@blueprintjs/core";
 import axios from "axios";
