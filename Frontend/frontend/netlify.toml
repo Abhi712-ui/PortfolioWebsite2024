@@ -1,6 +1,6 @@
 [build]
 base = "Frontend/frontend"
-publish = "Frontend/frontend/build"
+publish = "build"
 command = "npm run build"
 
 [[redirects]]
