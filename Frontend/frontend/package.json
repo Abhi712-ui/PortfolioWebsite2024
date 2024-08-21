@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "thriving-crostata-70cf49.netlify.app",
+  "homepage": "https://abhimanyu-sharma.netlify.app",
   "dependencies": {
     "@blueprintjs/core": "^5.11.0",
     "@emotion/react": "^11.13.0",
