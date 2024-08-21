@@ -1,34 +1,59 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, {useState} from 'react';
+import {Section, SectionCard, Tag, Divider} from "@blueprintjs/core";
+import {getMonthName, APIGetter} from "./APIGetter";
+
 
 function Experiences() {
     const [experiences, setExperiences] = useState([]);
-
-    useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/experiences/')
-            .then(response => {
-                setExperiences(response.data);
-            })
-            .catch(error => {
-                console.error('There was an error fetching the experiences!', error);
-            });
-    }, []);
+    APIGetter(experiences, setExperiences, 'http://127.0.0.1:8000/api/experiences/')
 
     return (
-        <div className="experiences-list">
+        <Section
+            title={"Experiences"}
+            elevation={1}
+            style={{marginBottom: '20px'}}
+            compact={true}
+            className={'public-sans'}
+        >
             {experiences.map(experience => (
-                <div key={experience.id} className="experience-item">
-                    <h3>{experience.role} at <a href={experience.company_website} target="_blank" rel="noopener noreferrer">{experience.company}</a></h3>
-                    <p>{experience.start_date} — {experience.is_current ? 'Present' : experience.end_date}</p>
-                    <p>{experience.description}</p>
-                    <div className="skills">
-                        {experience.skills && experience.skills.split(',').map(skill => (
-                            <span key={skill.trim()} className="skill-badge">{skill.trim()}</span>
-                        ))}
-                    </div>
-                </div>
+                <SectionCard key={experience.id}>
+                    <h3>
+                        {experience.role} at {" "}
+                        {experience.company_website ? (
+                            <a href={experience.company_website} target="_blank" rel="noopener noreferrer">
+                                {experience.company}
+                            </a>
+                        ) : (
+                             experience.company
+                        )}
+                    </h3>
+
+                    {(experience.start_month && experience.start_year) && (
+                        <Tag
+                            className={'public-sans bp5-minimal bp5-round bp5-intent-success'}
+                            style={{marginBottom: '5px', marginTop: '5px'}}
+                        >
+                            {getMonthName(experience.start_month)} {experience.start_year} — {experience.is_current ? 'Present' : `${getMonthName(experience.end_month)} ${experience.end_year}`}
+                        </Tag>
+                    )}
+                    {experience.description && <p>{experience.description}</p>}
+
+                    {experience.skills && (
+                        <div>
+                            <Divider/>
+                            {experience.skills.split(',').map(skill => (
+                                <Tag
+                                    key={skill.trim()}
+                                    className="bp5-minimal bp5-round bp5-intent-primary public-sans"
+                                    style={{marginRight: '10px'}}>
+                                    {skill.trim()}
+                                </Tag>
+                            ))}
+                        </div>
+                    )}
+                </SectionCard>
             ))}
-        </div>
+        </Section>
     );
 }
 
