@@ -1,5 +1,5 @@
 [build]
-base = "Frontend/frontend"  # Specify the base directory if your project is not in the root, e.g., "frontend"
+base = "PortfolioWebsite2024/Frontend/frontend/"  # Specify the base directory if your project is not in the root, e.g., "frontend"
 publish = "Frontend/frontend/build"  # This is the directory Netlify will deploy (usually "build" for React projects)
 command = "npm run build"  # This is the build command for your project
 
