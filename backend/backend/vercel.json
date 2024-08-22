@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "your_app_name/wsgi.py"
+      "dest": "backend/wsgi.py"
     }
   ]
 }
