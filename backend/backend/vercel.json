@@ -6,7 +6,7 @@
       "use": "@vercel/python"
     },
     {
-      "src": "your_app_name/wsgi.py",
+      "src": "backend/wsgi.py",
       "use": "@vercel/python"
     }
   ],
