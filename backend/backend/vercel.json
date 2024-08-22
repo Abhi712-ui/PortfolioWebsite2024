@@ -4,6 +4,16 @@
     {
       "src": "manage.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "your_app_name/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "your_app_name/wsgi.py"
     }
   ]
 }
