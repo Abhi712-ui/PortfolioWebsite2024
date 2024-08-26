@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-z2e_)grysc2p*xud000#3i5_3@#-s%=mb*jhkegyw@rsnxs)a8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://portfolio-website2024-two.vercel.app/']
+ALLOWED_HOSTS = []
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -63,7 +63,6 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://portfolio-website2024-two.vercel.app/'
     "https://abhimanyu-sharma.netlify.app",
 ]
 
