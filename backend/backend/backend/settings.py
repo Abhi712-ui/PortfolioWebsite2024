@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-z2e_)grysc2p*xud000#3i5_3@#-s%=mb*jhkegyw@rsnxs)a8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['abhimanyu-sharma-backend.netlify.app']
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
