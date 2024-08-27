@@ -4,7 +4,7 @@ import {useState} from "react";
 import {APIGetter, getMonthName} from "../components/APIGetter";
 export default function AllProjects() {
     const [projects, setProjects] = useState([]);
-    APIGetter(projects, setProjects, 'http://127.0.0.1:8000/api/projects/');
+    APIGetter(projects, setProjects, 'http://3.15.166.223:8000/api/projects/');
     return(
         <>
             <PortfolioNavbar/>

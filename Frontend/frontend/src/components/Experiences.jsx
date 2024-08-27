@@ -5,7 +5,7 @@ import {getMonthName, APIGetter} from "./APIGetter";
 
 function Experiences() {
     const [experiences, setExperiences] = useState([]);
-    APIGetter(experiences, setExperiences, 'http://127.0.0.1:8000/api/experiences/')
+    APIGetter(experiences, setExperiences, 'http://3.15.166.223:8000/api/experiences/')
 
     return (
         <Section

@@ -9,7 +9,7 @@ export default function Skills() {
 
     // Fetch skills data
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/skills/')
+        axios.get('http://3.15.166.223:8000/api/skills/')
             .then(response => {
                 setSkills(response.data);
                 // Extract project IDs

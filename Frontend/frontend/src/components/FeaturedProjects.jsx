@@ -4,7 +4,7 @@ import {getMonthName, APIGetter} from './APIGetter'
 
 function FeaturedProjects() {
     const [projects, setProjects] = useState([]);
-    APIGetter(projects, setProjects, 'http://127.0.0.1:8000/api/projects/')
+    APIGetter(projects, setProjects, 'http://3.15.166.223:8000/api/projects/')
     const featuredProjects = projects.filter(project => project.featured);
 
     return (
