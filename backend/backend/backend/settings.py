@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z2e_)grysc2p*xud000#3i5_3@#-s%=mb*jhkegyw@rsnxs)a8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -62,6 +62,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://abhimanyu-sharma.netlify.app",
+    "http://localhost:3000"
 ]
 
 ROOT_URLCONF = 'backend.urls'
