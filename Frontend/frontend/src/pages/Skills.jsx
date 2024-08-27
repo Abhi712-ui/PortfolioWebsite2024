@@ -19,7 +19,7 @@ export default function Skills() {
                 });
                 // Fetch project details based on extracted IDs
                 if (projectIds.size > 0) {
-                    axios.get('http://127.0.0.1:8000/api/projects/', {
+                    axios.get('http://3.15.166.223:8000/api/projects/', {
                         params: { ids: Array.from(projectIds) }
                     })
                         .then(res => {
